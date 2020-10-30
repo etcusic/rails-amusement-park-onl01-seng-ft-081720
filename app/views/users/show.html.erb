@@ -1,0 +1,9 @@
+<%# binding.pry %>
+<h1><%= @user.name %></h1>
+<h1>Mood</h1>
+<h1><%= @user.mood %></h1>
+<h1><%= @user.tickets %></h1>
+<h1><%= @user.height %></h1>
+
+<%#= link_to "Log Out", controller: 'sessions', method: 'post', action: 'destroy' %>
+<%= link_to "Log Out", '/signout', method: :post %>
