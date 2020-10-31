@@ -1,9 +1,28 @@
-<%# binding.pry %>
-<h1><%= @user.name %></h1>
-<h1>Mood</h1>
-<h1><%= @user.mood %></h1>
-<h1><%= @user.tickets %></h1>
-<h1><%= @user.height %></h1>
 
-<%#= link_to "Log Out", controller: 'sessions', method: 'post', action: 'destroy' %>
+<h2><%= @user.admin ? "ADMIN" : nil %></h2>
+<h2><%#= @message %></h2>
+<% flash.each do |name, msg| -%> 
+<%= content_tag :div, msg, class: name %>
+<% end %>
+<h1>Name: <%= @user.name %></h1>
+<h1>Mood: <%= @user.mood %></h1>
+<h1>Tickets: <%= @user.tickets %></h1>
+<h1>Height: <%= @user.height %></h1>
+
 <%= link_to "Log Out", '/signout', method: :post %>
+
+<%= link_to "See attractions", attractions_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%#= @user.rides.count > 0 ? @user.rides.last.take_ride : nil %>

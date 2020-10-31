@@ -5,7 +5,11 @@ class User < ApplicationRecord
 
     def mood
         # binding.pry
-        self.nausea < self.happiness ? "happy" : "sad"
+        if self.nausea && self.happiness
+            self.nausea < self.happiness ? "happy" : "sad"
+        else
+            "Shoulder shrug"
+        end
     end
 
 end

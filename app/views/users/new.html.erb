@@ -16,10 +16,10 @@
     <%= f.text_field :tickets %><br>
 
     <%= f.label :admin, "Check box if you are a theme park owner" %>
-    <%= f.check_box :admin, class: "user_admin" %><br>
+    <%= f.check_box :admin, id: "user_admin" %><br>
 
     <%= f.label :password, "Password" %>
-    <%= f.text_field :password %><br>
+    <%= f.text_field :password, id: "password" %><br>
 
     <%= f.submit "Create User" %>
 
